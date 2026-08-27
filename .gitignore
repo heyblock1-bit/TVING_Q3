@@ -1,0 +1,8 @@
+node_modules/
+
+# 로그인 자격과 동등하다. 절대 커밋하지 않는다.
+.auth/
+
+test-results/
+playwright-report/
+.DS_Store
