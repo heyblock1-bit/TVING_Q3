@@ -31,6 +31,8 @@ npm run login-extract
 
 ## 명령
 
+위 `login-extract` 하나면 과제 조건은 충족된다. 아래는 전체 목록이다.
+
 | 명령 | 설명 |
 | --- | --- |
 | `npm run login-extract` | 로그인부터 추출까지. 계정을 바꿔 실행하면 바뀐 계정의 값이 나온다 |
@@ -43,6 +45,8 @@ npm run login-extract
 `auth` 로 저장한 세션은 `extract` 계열과 `discover` 가 재사용한다. 세션이 없거나 만료되면 안내와 함께 실패한다.
 
 추출 결과를 단언까지 확인하려면 `npx playwright test tests/profileNo.spec.ts` 를 쓴다.
+
+`extract:raw` 는 값만 stdout 으로 내보내므로 다른 명령에 넘길 수 있다. 진단 메시지는 stderr 로 분리된다.
 
 ```bash
 PROFILE_NO=$(npm run --silent extract:raw)
