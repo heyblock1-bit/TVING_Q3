@@ -4,17 +4,12 @@
   "private": true,
   "description": "TVING 웹 로그인 후 네트워크 응답에서 profileNo를 추출한다",
   "scripts": {
-    "auth": "playwright test tests/auth.setup.spec.ts --headed",
-    "unit": "playwright test tests/unit.spec.ts tests/isLoggedIn.spec.ts",
-    "discover": "playwright test tests/discover.spec.ts --headed",
-    "extract": "playwright test tests/profileNo.spec.ts",
-    "extract:headed": "playwright test tests/profileNo.spec.ts --headed",
-    "typecheck": "tsc --noEmit",
-    "clean": "rm -rf test-results playwright-report .DS_Store",
-    "discover:debug": "PW_ARTIFACTS=1 playwright test tests/discover.spec.ts --headed",
-    "extract:value": "tsx scripts/printProfileNo.ts",
     "login-extract": "tsx scripts/printProfileNo.ts --login",
-    "extract:raw": "tsx scripts/printProfileNo.ts --raw"
+    "auth": "playwright test tests/auth.setup.spec.ts --headed",
+    "extract:value": "tsx scripts/printProfileNo.ts",
+    "extract:raw": "tsx scripts/printProfileNo.ts --raw",
+    "discover": "playwright test tests/discover.spec.ts --headed",
+    "unit": "playwright test tests/unit.spec.ts tests/isLoggedIn.spec.ts"
   },
   "devDependencies": {
     "@playwright/test": "^1.49.0",

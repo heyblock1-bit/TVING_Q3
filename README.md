@@ -38,14 +38,11 @@ npm run login-extract
 | `npm run extract:value` | 저장된 세션으로 추출 |
 | `npm run extract:raw` | 값만 출력 (파이프용) |
 | `npm run discover` | `profileNo` 가 어느 응답에 실려 오는지 탐지 |
-| `npm run extract` | 저장된 세션으로 추출과 검증 (테스트) |
 | `npm run unit` | 단위 테스트 27건. 계정과 세션 없이 실행된다 |
-| `npm run typecheck` | 타입 검사 |
-| `npm run extract:headed` | 추출을 브라우저를 띄운 채 실행 |
-| `npm run discover:debug` | 아티팩트를 켠 채 탐지 (`PW_ARTIFACTS=1`) |
-| `npm run clean` | 실행 아티팩트 삭제 |
 
 `auth` 로 저장한 세션은 `extract` 계열과 `discover` 가 재사용한다. 세션이 없거나 만료되면 안내와 함께 실패한다.
+
+추출 결과를 단언까지 확인하려면 `npx playwright test tests/profileNo.spec.ts` 를 쓴다.
 
 ```bash
 PROFILE_NO=$(npm run --silent extract:raw)
